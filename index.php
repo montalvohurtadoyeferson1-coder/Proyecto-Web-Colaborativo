@@ -7,6 +7,22 @@
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
+    <header>
+        <img src="img/logo.png" alt="Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.php">Inicio</a></li>
+                <li><a href="about.php">Sobre Nosotros</a></li>
+                <li><a href="contact.php">Contacto</a></li>
+                <li><a href="register.php">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="banner">
+            <img src="img/banner.jpeg" alt="Banner">
+        </div>
     <nav>
         <ul>
             <li><a href="index.php">Inicio</a></li>
