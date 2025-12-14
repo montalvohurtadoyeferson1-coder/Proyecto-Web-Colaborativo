@@ -1,3 +1,6 @@
+/* ====================================
+   1. Reset Básico y Tipografía
+   ==================================== */
 * {
     margin: 0;
     padding: 0;
@@ -5,115 +8,170 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    /* Fuente: Añadimos 'Roboto' o 'Open Sans' como alternativa moderna si estuviera disponible */
+    font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333; /* Color de texto base */
+    
+    /* Fondo Degradado Profundo */
+    background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%); /* Degradado más oscuro y contrastante */
     min-height: 100vh;
 }
 
-nav {
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 0;
+/* ====================================
+   2. Encabezado y Navegación (Header & Nav)
+   ==================================== */
+
+header {
+    /* Estructura del Header */
+    width: 100%;
+    background-color: #182848; /* Color oscuro que coincide con el degradado */
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para que flote un poco */
+}
+
+.logo {
+    /* Estilo del Logo */
+    height: 40px; 
+    margin-left: 30px;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5)); /* Pequeño brillo al logo */
+}
+
+/* El elemento NAV ya no está separado, está dentro del HEADER */
+header nav {
+    margin-right: 30px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
-    padding: 15px 0;
+    justify-content: flex-end; /* Alineamos a la derecha */
+    padding: 0;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 10px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 10px 15px;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease; /* Transición más suave */
+    font-weight: 600; /* Texto del menú más grueso */
+    letter-spacing: 0.5px;
 }
 
-nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+nav ul li a:hover,
+nav ul li a.active { /* Estilo para el enlace activo */
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #92a8d1; /* Resalta el texto al pasar el ratón */
+    transform: translateY(-2px);
 }
+
+/* ====================================
+   3. Banner
+   ==================================== */
+
+.banner {
+    width: 100%;
+    height: 200px; /* Aumentamos un poco la altura para más impacto */
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85; /* Hacemos la imagen un poco transparente para un efecto más suave */
+}
+
+/* ====================================
+   4. Contenedor Principal (Caja Blanca)
+   ==================================== */
 
 .container {
-    max-width: 800px;
+    max-width: 900px; /* Lo hacemos un poco más ancho */
     margin: 50px auto;
     background: white;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    padding: 50px; /* Aumentamos el padding interno */
+    border-radius: 12px; /* Esquinas ligeramente más suaves */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4); /* Sombra más profunda para darle realce */
+    border-left: 5px solid #4b6cb7; /* Línea de color de acento a la izquierda */
 }
 
 h1 {
-    color: #333;
-    margin-bottom: 20px;
+    color: #182848; /* Título con el color más oscuro del degradado */
+    margin-bottom: 25px;
     text-align: center;
+    font-weight: 700;
+    text-transform: uppercase; /* El título en mayúsculas */
+    letter-spacing: 1.5px;
 }
 
 p {
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 15px;
+    color: #444; /* Color de párrafo más oscuro para mejor legibilidad */
+    line-height: 1.7;
+    margin-bottom: 18px;
+    font-size: 16px;
 }
 
-.contact-info {
-    background: #f8f9fa;
-    padding: 20px;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-.contact-info p {
-    margin: 10px 0;
-}
-
-form {
-    max-width: 500px;
-    margin: 0 auto;
-}
+/* ====================================
+   5. Formularios y Botones
+   ==================================== */
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 5px;
-    color: #333;
-    font-weight: bold;
+    margin-bottom: 8px;
+    color: #182848;
+    font-weight: 600;
+    font-size: 15px;
 }
 
 .form-group input {
     width: 100%;
     padding: 12px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    font-size: 14px;
-    transition: border-color 0.3s;
+    border: 1px solid #ccc; /* Borde más sutil */
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s;
 }
 
 .form-group input:focus {
     outline: none;
-    border-color: #667eea;
+    border-color: #4b6cb7; /* Color de enfoque azul vibrante */
+    box-shadow: 0 0 5px rgba(75, 108, 183, 0.5);
 }
 
 button {
+    /* El botón usa el degradado del fondo */
     width: 100%;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
     color: white;
     padding: 15px;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 700;
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px); /* Movimiento más notorio */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    opacity: 0.9;
 }
