@@ -1,41 +1,67 @@
-// Mensaje de bienvenida al cargar la página
-console.log('Proyecto Web Colaborativo - Cargado correctamente');
+// ===============================
+// Proyecto Web Colaborativo
+// Funciones JS Mejoradas
+// ===============================
 
-// Validación del formulario de registro
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('Proyecto Web Colaborativo - Cargado correctamente');
+
+    // ===============================
+    // Validación del formulario
+    // ===============================
     const form = document.getElementById('formRegistro');
-    
+
     if (form) {
-        form.addEventListener('submit', function(e) {
+        form.addEventListener('submit', (e) => {
             e.preventDefault();
-            
-            const password = document.querySelector('input[name="password"]').value;
-            const confirmPassword = document.querySelector('input[name="confirm_password"]').value;
-            
+
+            const password = form.querySelector('input[name="password"]').value;
+            const confirmPassword = form.querySelector('input[name="confirm_password"]').value;
+
             if (password !== confirmPassword) {
-                alert('Las contraseñas no coinciden');
+                mostrarMensaje('Las contraseñas no coinciden ❌', 'error');
                 return;
             }
-            
+
             if (password.length < 6) {
-                alert('La contraseña debe tener al menos 6 caracteres');
+                mostrarMensaje('La contraseña debe tener al menos 6 caracteres ⚠️', 'error');
                 return;
             }
-            
-            alert('¡Registro exitoso! Formulario enviado correctamente.');
+
+            mostrarMensaje('¡Registro exitoso! ✅', 'success');
             form.reset();
         });
     }
+
+    // ===============================
+    // Marcar enlace activo en el menú
+    // ===============================
+    const links = document.querySelectorAll('nav a');
+    const urlActual = window.location.pathname;
+
+    links.forEach(link => {
+        if (link.getAttribute('href') && urlActual.includes(link.getAttribute('href'))) {
+            link.classList.add('active');
+        }
+    });
 });
 
-// Efecto hover en los enlaces del menú
-const navLinks = document.querySelectorAll('nav a');
-navLinks.forEach(link => {
-    link.addEventListener('mouseenter', function() {
-        this.style.transform = 'scale(1.1)';
-    });
-    
-    link.addEventListener('mouseleave', function() {
-        this.style.transform = 'scale(1)';
-    });
-});
+// ===============================
+// Mensajes visuales
+// ===============================
+function mostrarMensaje(texto, tipo) {
+    const mensaje = document.createElement('div');
+    mensaje.className = `mensaje ${tipo}`;
+    mensaje.textContent = texto;
+
+    document.body.appendChild(mensaje);
+
+    setTimeout(() => {
+        mensaje.classList.add('mostrar');
+    }, 100);
+
+    setTimeout(() => {
+        mensaje.classList.remove('mostrar');
+        setTimeout(() => mensaje.remove(), 500);
+    }, 3000);
+}
