@@ -1,67 +1,29 @@
-// ===============================
-// Proyecto Web Colaborativo
-// Funciones JS Mejoradas
-// ===============================
-
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Proyecto Web Colaborativo - Cargado correctamente');
+    console.log('Proyecto cargado correctamente');
 
-    // ===============================
-    // Validación del formulario
-    // ===============================
-    const form = document.getElementById('formRegistro');
+    const boton = document.getElementById('btnSaludo');
 
-    if (form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-
-            const password = form.querySelector('input[name="password"]').value;
-            const confirmPassword = form.querySelector('input[name="confirm_password"]').value;
-
-            if (password !== confirmPassword) {
-                mostrarMensaje('Las contraseñas no coinciden ❌', 'error');
-                return;
-            }
-
-            if (password.length < 6) {
-                mostrarMensaje('La contraseña debe tener al menos 6 caracteres ⚠️', 'error');
-                return;
-            }
-
-            mostrarMensaje('¡Registro exitoso! ✅', 'success');
-            form.reset();
-        });
-    }
-
-    // ===============================
-    // Marcar enlace activo en el menú
-    // ===============================
-    const links = document.querySelectorAll('nav a');
-    const urlActual = window.location.pathname;
-
-    links.forEach(link => {
-        if (link.getAttribute('href') && urlActual.includes(link.getAttribute('href'))) {
-            link.classList.add('active');
-        }
+    boton.addEventListener('click', () => {
+        mostrarMensaje('¡Gracias por visitar el proyecto! 👋');
     });
 });
 
-// ===============================
-// Mensajes visuales
-// ===============================
-function mostrarMensaje(texto, tipo) {
+function mostrarMensaje(texto) {
     const mensaje = document.createElement('div');
-    mensaje.className = `mensaje ${tipo}`;
     mensaje.textContent = texto;
+    mensaje.style.position = 'fixed';
+    mensaje.style.bottom = '20px';
+    mensaje.style.right = '20px';
+    mensaje.style.background = '#333';
+    mensaje.style.color = 'white';
+    mensaje.style.padding = '15px 20px';
+    mensaje.style.borderRadius = '8px';
+    mensaje.style.boxShadow = '0 10px 20px rgba(0,0,0,0.4)';
+    mensaje.style.zIndex = '999';
 
     document.body.appendChild(mensaje);
 
     setTimeout(() => {
-        mensaje.classList.add('mostrar');
-    }, 100);
-
-    setTimeout(() => {
-        mensaje.classList.remove('mostrar');
-        setTimeout(() => mensaje.remove(), 500);
+        mensaje.remove();
     }, 3000);
 }
