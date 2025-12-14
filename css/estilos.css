@@ -17,7 +17,7 @@ body {
     min-height: 100vh;
 }
 
-/* ====================================
+/* ==
    2. Encabezado y Navegación (Header & Nav)
    ==================================== */
 
@@ -174,4 +174,89 @@ button:hover {
     transform: translateY(-3px); /* Movimiento más notorio */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
     opacity: 0.9;
+}
+/* ====================================
+   6. Pie de Página (Footer)
+   ==================================== */
+
+footer {
+    /* Mantiene el fondo oscuro para contraste */
+    background-color: #182848; 
+    color: #f8f8f8;
+    padding: 40px 0 20px 0;
+    width: 100%;
+    margin-top: auto; /* Empuja el footer hacia la parte inferior */
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5); /* Sombra hacia arriba */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    padding: 15px;
+    width: 30%; /* Distribución en tres columnas */
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    color: #667eea; /* Color de acento para los títulos */
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.footer-section p,
+.footer-section li {
+    color: #ccc;
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: #667eea;
+}
+
+/* Estilos para los iconos sociales (usando letras como ejemplo, lo ideal es usar iconos) */
+.social-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background-color: #4b6cb7;
+    color: white;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: #667eea;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0 0 0;
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.8em;
+    color: #888;
 }
