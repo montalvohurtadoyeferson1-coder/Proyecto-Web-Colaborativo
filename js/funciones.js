@@ -1,29 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Proyecto cargado correctamente');
 
+    // Botón saludo
     const boton = document.getElementById('btnSaludo');
+    if (boton) {
+        boton.addEventListener('click', () => {
+            alert('¡Gracias por visitar nuestro proyecto!');
+        });
+    }
 
-    boton.addEventListener('click', () => {
-        mostrarMensaje('¡Gracias por visitar el proyecto! 👋');
-    });
+    // Validación simple del formulario
+    const form = document.getElementById('formRegistro');
+    if (form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Registro enviado correctamente ✅');
+            form.reset();
+        });
+    }
 });
-
-function mostrarMensaje(texto) {
-    const mensaje = document.createElement('div');
-    mensaje.textContent = texto;
-    mensaje.style.position = 'fixed';
-    mensaje.style.bottom = '20px';
-    mensaje.style.right = '20px';
-    mensaje.style.background = '#333';
-    mensaje.style.color = 'white';
-    mensaje.style.padding = '15px 20px';
-    mensaje.style.borderRadius = '8px';
-    mensaje.style.boxShadow = '0 10px 20px rgba(0,0,0,0.4)';
-    mensaje.style.zIndex = '999';
-
-    document.body.appendChild(mensaje);
-
-    setTimeout(() => {
-        mensaje.remove();
-    }, 3000);
-}

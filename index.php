@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <title>Proyecto Web Colaborativo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- CSS -->
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
@@ -16,38 +14,65 @@
 
         <nav>
             <ul>
-                <li><a href="#" class="active">Inicio</a></li>
-                <li><a href="#">Sobre Nosotros</a></li>
-                <li><a href="#">Contacto</a></li>
-                <li><a href="#">Registro</a></li>
+                <li><a href="#inicio" class="active">Inicio</a></li>
+                <li><a href="#nosotros">Sobre Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#registro">Registro</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
-<section class="banner">
-    <img src="img/banner.jpg" alt="Banner">
+<!-- INICIO -->
+<section class="banner" id="inicio">
     <div class="banner-text">
         <h1>Proyecto Web Colaborativo</h1>
         <p>Diseño moderno y funcional</p>
     </div>
 </section>
 
+<!-- BIENVENIDA -->
 <main class="container">
     <h2>Bienvenido</h2>
     <p>
         Esta es la página principal de nuestro proyecto web colaborativo.
         Ha sido desarrollado utilizando XAMPP, Visual Studio Code y GitHub.
     </p>
-
     <button id="btnSaludo">Haz clic aquí</button>
 </main>
+
+<!-- SOBRE NOSOTROS -->
+<section class="seccion" id="nosotros">
+    <h2>Sobre Nosotros</h2>
+    <p>
+        Somos un equipo de estudiantes que desarrolló este proyecto web colaborativo
+        aplicando buenas prácticas de diseño, trabajo en equipo y control de versiones.
+    </p>
+</section>
+
+<!-- CONTACTO -->
+<section class="seccion" id="contacto">
+    <h2>Contacto</h2>
+    <p>Email: contacto@proyecto.com</p>
+    <p>Teléfono: 999 999 999</p>
+</section>
+
+<!-- REGISTRO -->
+<section class="seccion" id="registro">
+    <h2>Registro</h2>
+
+    <form id="formRegistro">
+        <input type="text" placeholder="Nombre" required>
+        <input type="email" placeholder="Correo" required>
+        <input type="password" placeholder="Contraseña" required>
+        <button type="submit">Registrarse</button>
+    </form>
+</section>
 
 <footer>
     <p>© 2025 - Proyecto Web Colaborativo</p>
 </footer>
 
-<!-- JS -->
 <script src="js/funciones.js"></script>
 </body>
 </html>
