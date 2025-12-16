@@ -11,13 +11,17 @@
     --bg-2: #fad0c4;
     --accent-1: #8acb11;
     --accent-2: #fcd525;
-    --card-bg: rgba(255,255,255,0.95);
+    --card-bg: rgba(149, 175, 209, 0.95);
 }
 
 /* BODY */
 body {
     font-family: 'Segoe UI', sans-serif;
+<<<<<<< HEAD
+    background: linear-gradient(135deg, #0f1531, #32263d);
+=======
     background: linear-gradient(135deg, var(--bg-1), var(--bg-2));
+>>>>>>> 5b8a7df0a958391ca9d7c4763820ca99c320b7e5
     min-height: 100vh;
     color: #222;
 }
@@ -38,7 +42,11 @@ header {
 }
 
 .logo {
+<<<<<<< HEAD
+    height: 60px;
+=======
     height: 48px;
+>>>>>>> 5b8a7df0a958391ca9d7c4763820ca99c320b7e5
 }
 
 /* NAV */
@@ -119,7 +127,7 @@ nav ul li a.active {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: rgb(87, 24, 24);
     text-align: center;
     z-index: 2;
 }
@@ -152,8 +160,13 @@ button {
     margin-top: 20px;
     padding: 12px 25px;
     border: none;
+<<<<<<< HEAD
+    border-radius: 8px;
+    background: linear-gradient(135deg, #667eea, #9a47ee);
+=======
     border-radius: 12px;
     background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+>>>>>>> 5b8a7df0a958391ca9d7c4763820ca99c320b7e5
     color: white;
     font-size: 16px;
     cursor: pointer;

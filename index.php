@@ -106,7 +106,7 @@ Estamos enfocados en transformar ideas en soluciones digitales robustas y estét
 <section class="seccion" id="contacto">
     <h2>CONTACTO</h2>
     <p>Email: contacto@proyecto.com</p>
-    <p>Teléfono: 999 999 999</p>
+    <p>Teléfono: 976 598 765</p>
 </section>
 
 <!-- REGISTRO -->
