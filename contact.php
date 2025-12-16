@@ -19,8 +19,8 @@
     <div class="container">
         <h1>Datos de Contacto</h1>
         <div class="contact-info">
-            <p><strong>Email:</strong> contacto@proyecto.com</p>
-            <p><strong>Teléfono:</strong> +123 456 7890</p>
+            <p><strong>Email:</strong> yeferson montalvo hurtado</p>
+            <p><strong>Teléfono:</strong> 921320252</p>
             <p><strong>Dirección:</strong> Calle Principal #123</p>
         </div>
     </div>

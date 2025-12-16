@@ -1,3 +1,25 @@
+<?php
+session_start();
+
+if (isset($_GET['logout'])) {
+    session_unset();
+    session_destroy();
+    header('Location: register.php');
+    exit;
+}
+
+$login_error = '';
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login_submit'])) {
+    $user = $_POST['username'] ?? '';
+    $pass = $_POST['password'] ?? '';
+    if ($user === 'root' && $pass === 'root123') {
+        $_SESSION['user'] = 'root';
+    } else {
+        $login_error = 'Credenciales incorrectas';
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -15,6 +37,21 @@
             <li><a href="register.php">Registro</a></li>
         </ul>
     </nav>
+    
+    <div class="login-area small">
+        <?php if (!empty($_SESSION['user'])): ?>
+            <div class="welcome">Hola, <strong><?php echo htmlspecialchars($_SESSION['user']); ?></strong> - <a href="?logout=1">Cerrar sesión</a></div>
+        <?php else: ?>
+            <form class="login-form" method="post" action="register.php">
+                <input type="text" name="username" placeholder="Usuario" required>
+                <input type="password" name="password" placeholder="Contraseña" required>
+                <button type="submit" name="login_submit">Entrar</button>
+            </form>
+            <?php if ($login_error): ?>
+                <div class="login-error"><?php echo $login_error; ?></div>
+            <?php endif; ?>
+        <?php endif; ?>
+    </div>
     
     <div class="container">
         <h1>Formulario de Registro</h1>
