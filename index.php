@@ -62,19 +62,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login_submit'])) {
 </header>
 
 <!-- INICIO -->
-<section class="banner" id="inicio">
+<section class="banner" id="iNICIO">
     <div class="banner-text">
-        <h1>Proyecto Web Colaborativo</h1>
+        <h1>MI TRABAJO "APSTI"</h1>
         <p>Diseño moderno y funcional</p>
     </div>
 </section>
 
 <!-- BIENVENIDA -->
 <main class="container">
-    <h2>Bienvenido</h2>
+    <h2>BIENVENIDO</h2>
     <p>
-        Esta es la página principal de nuestro proyecto web colaborativo.
-        Ha sido desarrollado utilizando XAMPP, Visual Studio Code y GitHub.
+        👋 ¡Bienvenidos a Nuestro Proyecto Colaborativo!
+Es un placer darles la bienvenida a nuestro espacio de creación digital. Somos un equipo apasionado y sinérgico que trabaja codo a codo para dar vida a este proyecto web.
+
+🚀 Innovación y Excelencia Tecnológica
+En el corazón de nuestro trabajo reside el compromiso con la innovación y la calidad. Utilizamos un stack de tecnologías modernas y de vanguardia, asegurando no solo un rendimiento excepcional, sino también una experiencia de usuario fluida, intuitiva y a prueba de futuro.
+
+✨ Nuestra Misión
+Estamos enfocados en transformar ideas en soluciones digitales robustas y estéticamente impecables. Cada línea de código es un reflejo de nuestra dedicación, conocimiento técnico y espíritu colaborativo.
+
+¡Gracias por acompañarnos en este emocionante viaje de desarrollo!
     </p>
     <button id="btnSaludo">Haz clic aquí</button>
 
@@ -85,16 +93,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login_submit'])) {
 
 <!-- SOBRE NOSOTROS -->
 <section class="seccion" id="nosotros">
-    <h2>Sobre Nosotros</h2>
+    <h2>ALUMNOS</h2>
     <p>
-        Somos un equipo de estudiantes que desarrolló este proyecto web colaborativo
-        aplicando buenas prácticas de diseño, trabajo en equipo y control de versiones.
+       < YEFERSON MONTALVO HURTADO> <P>
+        
+       </P>
+       > CELESTINO JESUS NAYDA> 
     </p>
 </section>
 
 <!-- CONTACTO -->
 <section class="seccion" id="contacto">
-    <h2>Contacto</h2>
+    <h2>CONTACTO</h2>
     <p>Email: contacto@proyecto.com</p>
     <p>Teléfono: 999 999 999</p>
 </section>

@@ -9,9 +9,10 @@
 <body>
     <nav>
         <ul>
-            <li><a href="index.php">INICIO</a></li>
-            <li><a href="about.php">BIENVENIDO</a></li>
-            <li><a href="contact.php">INTEGRANTE</a></li>
+            <li><a href="inicio.php">INICIO</a></li>
+            <li><a href="bienvenida.php">BIENVENIDO</a></li>
+            <li><a href="about.php">SOBRE NOSOTROS</a></li>
+            <li><a href="contact.php">CONTACTO</a></li>
             <li><a href="register.php">REGISTRO</a></li>
         </ul>
     </nav>
