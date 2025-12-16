@@ -9,11 +9,11 @@
 <body>
     <nav>
         <ul>
-            <li><a href="inicio.php">INICIO</a></li>
-            <li><a href="bienvenida.php">BIENVENIDO</a></li>
-            <li><a href="about.php">SOBRE NOSOTROS</a></li>
-            <li><a href="contact.php">CONTACTO</a></li>
-            <li><a href="register.php">REGISTRO</a></li>
+            <li><a href="inicio.php">Inicio</a></li>
+            <li><a href="bienvenida.php">Bienvenido</a></li>
+            <li><a href="about.php" class="active">Sobre Nosotros</a></li>
+            <li><a href="contact.php">Contacto</a></li>
+            <li><a href="register.php">Registro</a></li>
         </ul>
     </nav>
     
@@ -35,19 +35,14 @@ Estamos enfocados en transformar ideas en soluciones digitales robustas y estét
             <li>YEFERSON MONTALVO HURTADO</li>
             <li>CELESTINO JESUS NAYDA</li>
         </ul>
-            <!-- Mostrar imagen del proyecto con marco bonito -->
-            <div class="image-wrap">
-                <figure class="image-frame">
-                    <img src="img/logo%20ISTPDAC.png" alt="Logo del proyecto">
-                    <figcaption>Logo del proyecto</figcaption>
-                </figure>
-            </div>
-        
-            <h2>Integrantes</h2>
-            <ul class="team-list">
-                <li>YEFERSON MONTALVO HURTADO</li>
-                <li>CELESTINO JESUS NAYDA</li>
-            </ul>
+
+        <!-- Mostrar imagen del proyecto con marco bonito -->
+        <div class="image-wrap">
+            <figure class="image-frame">
+                <img src="img/logo%20ISTPDAC.png" alt="Logo del proyecto">
+                <figcaption>Logo del proyecto</figcaption>
+            </figure>
+        </div>
     
     <script src="js/funciones.js"></script>
 </body>

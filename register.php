@@ -32,10 +32,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login_submit'])) {
     <nav>
         <ul>
             <li><a href="inicio.php">Inicio</a></li>
-            <li><a href="bienvenida.php">Bienvenida</a></li>
+            <li><a href="bienvenida.php">Bienvenido</a></li>
             <li><a href="about.php">Sobre Nosotros</a></li>
             <li><a href="contact.php">Contacto</a></li>
-            <li><a href="register.php">Registro</a></li>
+            <li><a href="register.php" class="active">Registro</a></li>
         </ul>
     </nav>
     

@@ -1,35 +1,8 @@
 <?php
-session_start();
-
-// Manejo simple de login/logout para demo (usuario: root / contraseña: root123)
-if (isset($_GET['logout'])) {
-    session_unset();
-    session_destroy();
-    header('Location: index.php');
-    exit;
-}
-
-$login_error = '';
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login_submit'])) {
-    $user = $_POST['username'] ?? '';
-    $pass = $_POST['password'] ?? '';
-    if ($user === 'root' && $pass === 'root123') {
-        $_SESSION['user'] = 'root';
-    } else {
-        $login_error = 'Credenciales incorrectas';
-    }
-}
+// Redirigir a inicio.php (página principal dividida)
+header('Location: inicio.php');
+exit;
 ?>
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>MI PAGINA 2.0</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilos.css">
-</head>
-<body>
 
 <header>
     <div class="header-container">
@@ -106,7 +79,7 @@ Estamos enfocados en transformar ideas en soluciones digitales robustas y estét
 <section class="seccion" id="contacto">
     <h2>CONTACTO</h2>
     <p>Email: contacto@proyecto.com</p>
-    <p>Teléfono: 976 598 765</p>
+    <p>Teléfono: 999 999 999</p>
 </section>
 
 <!-- REGISTRO -->

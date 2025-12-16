@@ -1,69 +1,48 @@
 <?php
 session_start();
-
-if (isset($_GET['logout'])) {
-    session_unset();
-    session_destroy();
-    header('Location: bienvenida.php');
-    exit;
-}
-
-$login_error = '';
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login_submit'])) {
-    $user = $_POST['username'] ?? '';
-    $pass = $_POST['password'] ?? '';
-    if ($user === 'root' && $pass === 'root123') {
-        $_SESSION['user'] = 'root';
-    } else {
-        $login_error = 'Credenciales incorrectas';
-    }
-}
 ?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Bienvenida - Proyecto Web</title>
+    <title>Bienvenido - Proyecto</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 <header>
     <div class="header-container">
-        <img src="img/logo%20ISTPDAC.png" alt="Logo" class="logo">
+        <img src="img/logo.png" alt="Logo" class="logo">
         <nav>
             <ul>
                 <li><a href="inicio.php">Inicio</a></li>
-                <li><a href="bienvenida.php" class="active">Bienvenida</a></li>
+                <li><a href="bienvenida.php" class="active">Bienvenido</a></li>
                 <li><a href="about.php">Sobre Nosotros</a></li>
                 <li><a href="contact.php">Contacto</a></li>
                 <li><a href="register.php">Registro</a></li>
             </ul>
         </nav>
-
         <div class="login-area">
             <?php if (!empty($_SESSION['user'])): ?>
-                <div class="welcome">Hola, <strong><?php echo htmlspecialchars($_SESSION['user']); ?></strong> - <a href="?logout=1">Cerrar sesión</a></div>
-            <?php else: ?>
-                <form class="login-form" method="post" action="bienvenida.php">
-                    <input type="text" name="username" placeholder="Usuario" required>
-                    <input type="password" name="password" placeholder="Contraseña" required>
-                    <button type="submit" name="login_submit">Entrar</button>
-                </form>
-                <?php if ($login_error): ?>
-                    <div class="login-error"><?php echo $login_error; ?></div>
-                <?php endif; ?>
+                <div class="welcome">Hola, <strong><?php echo htmlspecialchars($_SESSION['user']); ?></strong> - <a href="inicio.php?logout=1">Cerrar sesión</a></div>
             <?php endif; ?>
         </div>
     </div>
 </header>
 
 <main class="container">
-    <h2>Bienvenido</h2>
+    <h2>BIENVENIDO</h2>
     <p>
-        Esta es la página principal de nuestro proyecto web colaborativo.
-        Ha sido desarrollado utilizando XAMPP, Visual Studio Code y GitHub.
+        👋 ¡Bienvenidos a Nuestro Proyecto Colaborativo!
+        Es un placer darles la bienvenida a nuestro espacio de creación digital. Somos un equipo apasionado y sinérgico que trabaja codo a codo para dar vida a este proyecto web.
+
+        🚀 Innovación y Excelencia Tecnológica
+        En el corazón de nuestro trabajo reside el compromiso con la innovación y la calidad. Utilizamos un stack de tecnologías modernas y de vanguardia, asegurando no solo un rendimiento excepcional, sino también una experiencia de usuario fluida, intuitiva y a prueba de futuro.
+
+        ✨ Nuestra Misión
+        Estamos enfocados en transformar ideas en soluciones digitales robustas y estéticamente impecables. Cada línea de código es un reflejo de nuestra dedicación, conocimiento técnico y espíritu colaborativo.
+
+        ¡Gracias por acompañarnos en este emocionante viaje de desarrollo!
     </p>
     <button id="btnSaludo">Haz clic aquí</button>
 
