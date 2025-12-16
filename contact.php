@@ -19,9 +19,12 @@
     <div class="container">
         <h1>Datos de Contacto</h1>
         <div class="contact-info">
-            <p><strong>Email:</strong> yeferson montalvo hurtado</p>
+            <p><strong>Nombre</strong> yeferson montalvo hurtado</p>
             <p><strong>Teléfono:</strong> 921320252</p>
-            <p><strong>Dirección:</strong> Calle Principal #123</p>
+            <p><strong>Dirección:</strong> vilcabamba rgba(212, 165, 34, 1)</p>
+            <p><strong>Nombre</strong> Nayda celestino JESUS</p>
+            <p><strong>Teléfono:</strong> 9255565665</p>
+            <p><strong>Dirección:</strong> bonifati rgba(216, 213, 41, 1)</p>
         </div>
     </div>
     
